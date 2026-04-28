@@ -1,0 +1,31 @@
+[2024-03-15 08:01:12] [INFO] [systemd] System boot completed successfully
+[2024-03-15 08:01:15] [INFO] [sshd] Server listening on 0.0.0.0 port 22
+[2024-03-15 08:01:16] [INFO] [nginx] Starting nginx web server
+[2024-03-15 08:02:30] [INFO] [sshd] Accepted publickey for admin from 192.168.1.10 port 54221
+[2024-03-15 08:05:44] [WARN] [sshd] authentication failure for root from 10.0.0.55 port 39182
+[2024-03-15 08:05:45] [WARN] [sshd] authentication failure for root from 10.0.0.55 port 39183
+[2024-03-15 08:05:46] [ERROR] [sshd] authentication failure for admin from 10.0.0.55 port 39184
+[2024-03-15 08:06:01] [INFO] [cron] Running scheduled backup job
+[2024-03-15 08:06:10] [INFO] [nginx] GET /index.html 200 OK
+[2024-03-15 08:07:22] [ERROR] [sudo] user jdoe : 3 incorrect password attempts ; TTY=pts/0 ; COMMAND=sudo su - failed
+[2024-03-15 08:07:25] [WARN] [kernel] Firewall: blocked incoming connection from 203.0.113.42
+[2024-03-15 08:08:00] [INFO] [nginx] GET /api/health 200 OK
+[2024-03-15 08:08:15] [ERROR] [audit] Access denied for user guest to /etc/shadow
+[2024-03-15 08:09:30] [INFO] [sshd] Accepted password for deploy from 192.168.1.20 port 62310
+[2024-03-15 08:10:01] [INFO] [cron] CRON job completed: /usr/local/bin/cleanup.sh
+[2024-03-15 08:10:45] [WARN] [kernel] Process nc started by user jdoe PID=8832
+[2024-03-15 08:11:02] [ERROR] [audit] permission denied for user intern accessing /var/log/auth.log
+[2024-03-15 08:12:00] [INFO] [nginx] POST /api/login 200 OK
+[2024-03-15 08:12:30] [INFO] [mysql] Query executed successfully on database forensics_db
+[2024-03-15 08:13:15] [WARN] [sshd] authentication failure for operator from 172.16.0.99 port 44210
+[2024-03-15 08:14:00] [INFO] [systemd] Service nginx reloaded
+[2024-03-15 08:14:30] [ERROR] [sudo] user intern : command not allowed ; COMMAND=sudo cat /etc/shadow failed
+[2024-03-15 08:15:00] [INFO] [cron] Running log rotation
+[2024-03-15 08:15:22] [WARN] [kernel] Suspicious process netcat detected PID=9102 user=unknown
+[2024-03-15 08:15:45] [INFO] [nginx] GET /dashboard 200 OK
+[2024-03-15 08:16:00] [ERROR] [audit] unauthorized access attempt by user test on /root/.ssh/authorized_keys
+[2024-03-15 08:16:30] [INFO] [sshd] Connection closed by 192.168.1.10
+[2024-03-15 08:17:00] [INFO] [mysql] Replication sync completed
+[2024-03-15 08:17:15] [WARN] [kernel] High CPU usage detected: 95% by process crypto_miner
+[2024-03-15 08:18:00] [INFO] [nginx] GET /static/logo.png 304 Not Modified
+[2024-03-15 08:18:30] [ERROR] [sshd] authentication failure for root from 10.0.0.55 port 39200
