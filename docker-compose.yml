@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: forensic-postgres
+    environment:
+      POSTGRES_DB: forensicdb
+      POSTGRES_USER: forensic
+      POSTGRES_PASSWORD: forensic123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U forensic -d forensicdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  app:
+    build: .
+    container_name: forensic-engine
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - spring.datasource.url=jdbc:postgresql://postgres:5432/forensicdb
+      - spring.datasource.username=forensic
+      - spring.datasource.password=forensic123
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/forensicdb
+      - SPRING_DATASOURCE_USERNAME=forensic
+      - SPRING_DATASOURCE_PASSWORD=forensic123
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local

